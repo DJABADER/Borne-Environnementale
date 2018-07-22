@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register"
+    android:padding="20dp"
+    tools:context=".Register">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Inscription"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="20dp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="48dp"
+            android:background="#fbfefd"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Entrer son pseudo ici"
+            android:inputType="textPersonName"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="26dp"
+            android:background="#fbfefd"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Entrer son mot de passe ici"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@+id/email"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <EditText
+            android:id="@+id/password_conf"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="26dp"
+            android:background="#fbfefd"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Confirmation du mot de passe"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:background="#fbfefd"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Entrer son email ici"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="S'inscrire"
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            tools:layout_editor_absoluteX="20dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+

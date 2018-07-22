@@ -1,0 +1,667 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mchav.projetborne.UVFragment"
+    app:menu="@menu/navigation">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/fragUV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewCiel"
+            android:layout_width="wrap_content"
+            android:layout_height="435dp"
+            android:adjustViewBounds="false"
+            android:background="@drawable/ciel"
+            android:cropToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <WebView
+            android:id="@+id/web"
+            android:layout_width="0dp"
+            android:layout_height="360dp"
+            android:layout_marginBottom="52dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ImageUV"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:scaleType="center"
+            android:src="@drawable/gris2"
+            app:layout_constraintBottom_toTopOf="@+id/web"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ImageRAD"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/gris1"
+            app:layout_constraintBottom_toTopOf="@+id/ImageUV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:scaleType="center"
+            android:src="@drawable/gris2"
+            app:layout_constraintBottom_toTopOf="@+id/ImageRAD"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/gris1"
+            app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:scaleType="center"
+            android:src="@drawable/gris2"
+            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/Indice_UV"
+                android:layout_width="291dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:text="Indice UV :"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/imageView5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageViewCiel"
+                app:layout_constraintVertical_bias="0.39999998" />
+
+            <TextView
+                android:id="@+id/RAD1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="UV"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Indice_UV"
+                app:layout_constraintStart_toEndOf="@+id/Indice_UV"
+                app:layout_constraintTop_toTopOf="@+id/Indice_UV"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/Données"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:text="Données datant du"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Indice_UV" />
+
+            <TextView
+                android:id="@+id/Date1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="DATE"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/Données"
+                app:layout_constraintStart_toEndOf="@+id/Données"
+                app:layout_constraintTop_toTopOf="@+id/Données" />
+
+            <TextView
+                android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="à"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/Date1"
+                app:layout_constraintStart_toEndOf="@+id/Date1"
+                app:layout_constraintTop_toTopOf="@+id/Date1" />
+
+            <TextView
+                android:id="@+id/Heure1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="HEURE"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/a"
+                app:layout_constraintStart_toEndOf="@+id/a"
+                app:layout_constraintTop_toTopOf="@+id/a" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5"
+            app:layout_constraintStart_toStartOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5">
+
+            <TextView
+                android:id="@+id/Indice_RAD2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:text="Indice UV de"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+            <TextView
+                android:id="@+id/RAD2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="UV"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Indice_RAD2"
+                app:layout_constraintStart_toEndOf="@+id/Indice_RAD2"
+                app:layout_constraintTop_toTopOf="@+id/Indice_RAD2" />
+
+            <TextView
+                android:id="@+id/le2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="le"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/RAD2"
+                app:layout_constraintStart_toEndOf="@+id/RAD2"
+                app:layout_constraintTop_toTopOf="@+id/RAD2" />
+
+            <TextView
+                android:id="@+id/Date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="DATE"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/le2"
+                app:layout_constraintStart_toEndOf="@+id/le2"
+                app:layout_constraintTop_toTopOf="@+id/le2" />
+
+            <TextView
+                android:id="@+id/a2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="à"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/Date2"
+                app:layout_constraintStart_toEndOf="@+id/Date2"
+                app:layout_constraintTop_toTopOf="@+id/Date2" />
+
+            <TextView
+                android:id="@+id/Heure2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Heure"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/a2"
+                app:layout_constraintStart_toEndOf="@+id/a2"
+                app:layout_constraintTop_toTopOf="@+id/a2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5">
+
+            <TextView
+                android:id="@+id/Indice_RAD3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:text="Indice UV de"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+            <TextView
+                android:id="@+id/RAD3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="UV"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Indice_RAD3"
+                app:layout_constraintStart_toEndOf="@+id/Indice_RAD3"
+                app:layout_constraintTop_toTopOf="@+id/Indice_RAD3" />
+
+            <TextView
+                android:id="@+id/le3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="le"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/RAD3"
+                app:layout_constraintStart_toEndOf="@+id/RAD3"
+                app:layout_constraintTop_toTopOf="@+id/RAD3" />
+
+            <TextView
+                android:id="@+id/Date3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="DATE"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/le3"
+                app:layout_constraintStart_toEndOf="@+id/le3"
+                app:layout_constraintTop_toTopOf="@+id/le3" />
+
+            <TextView
+                android:id="@+id/a3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="à"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/Date3"
+                app:layout_constraintStart_toEndOf="@+id/Date3"
+                app:layout_constraintTop_toTopOf="@+id/Date3" />
+
+            <TextView
+                android:id="@+id/Heure3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Heure"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/a3"
+                app:layout_constraintStart_toEndOf="@+id/a3"
+                app:layout_constraintTop_toTopOf="@+id/a3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+            app:layout_constraintStart_toStartOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+            <TextView
+                android:id="@+id/Indice_RAD4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:text="Indice UV de"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintStart_toStartOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            <TextView
+                android:id="@+id/RAD4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="UV"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Indice_RAD4"
+                app:layout_constraintStart_toEndOf="@+id/Indice_RAD4"
+                app:layout_constraintTop_toTopOf="@+id/Indice_RAD4" />
+
+            <TextView
+                android:id="@+id/le4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="le"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/RAD4"
+                app:layout_constraintStart_toEndOf="@+id/RAD4"
+                app:layout_constraintTop_toTopOf="@+id/RAD4" />
+
+            <TextView
+                android:id="@+id/Date4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="DATE"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/le4"
+                app:layout_constraintStart_toEndOf="@+id/le4"
+                app:layout_constraintTop_toTopOf="@+id/le4" />
+
+            <TextView
+                android:id="@+id/a4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="à"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/Date4"
+                app:layout_constraintStart_toEndOf="@+id/Date4"
+                app:layout_constraintTop_toTopOf="@+id/Date4" />
+
+            <TextView
+                android:id="@+id/Heure4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Heure"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/a4"
+                app:layout_constraintStart_toEndOf="@+id/a4"
+                app:layout_constraintTop_toTopOf="@+id/a4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/ImageRAD"
+            app:layout_constraintEnd_toEndOf="@+id/ImageRAD"
+            app:layout_constraintStart_toStartOf="@+id/ImageRAD"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+            <TextView
+                android:id="@+id/Indice_RAD5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:text="Indice UV de"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ImageRAD"
+                app:layout_constraintStart_toStartOf="@+id/ImageRAD"
+                app:layout_constraintTop_toTopOf="@+id/ImageRAD" />
+
+            <TextView
+                android:id="@+id/RAD5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="UV"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Indice_RAD5"
+                app:layout_constraintStart_toEndOf="@+id/Indice_RAD5"
+                app:layout_constraintTop_toTopOf="@+id/Indice_RAD5" />
+
+            <TextView
+                android:id="@+id/le5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="le"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/RAD5"
+                app:layout_constraintStart_toEndOf="@+id/RAD5"
+                app:layout_constraintTop_toTopOf="@+id/RAD5" />
+
+            <TextView
+                android:id="@+id/Date5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="DATE"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/le5"
+                app:layout_constraintStart_toEndOf="@+id/le5"
+                app:layout_constraintTop_toTopOf="@+id/le5" />
+
+            <TextView
+                android:id="@+id/a5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="à"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/Date5"
+                app:layout_constraintStart_toEndOf="@+id/Date5"
+                app:layout_constraintTop_toTopOf="@+id/Date5" />
+
+            <TextView
+                android:id="@+id/Heure5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Heure"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/a5"
+                app:layout_constraintStart_toEndOf="@+id/a5"
+                app:layout_constraintTop_toTopOf="@+id/a5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/ImageUV"
+            app:layout_constraintEnd_toEndOf="@+id/ImageUV"
+            app:layout_constraintStart_toStartOf="@+id/ImageUV"
+            app:layout_constraintTop_toBottomOf="@+id/ImageRAD">
+
+            <TextView
+                android:id="@+id/Indice_RAD6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Indice UV de"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ImageUV"
+                app:layout_constraintStart_toStartOf="@+id/ImageUV"
+                app:layout_constraintTop_toTopOf="@+id/ImageUV" />
+
+            <TextView
+                android:id="@+id/RAD6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="UV"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/Indice_RAD6"
+                app:layout_constraintStart_toEndOf="@+id/Indice_RAD6"
+                app:layout_constraintTop_toTopOf="@+id/Indice_RAD6" />
+
+            <TextView
+                android:id="@+id/le6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="le"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/RAD6"
+                app:layout_constraintStart_toEndOf="@+id/RAD6"
+                app:layout_constraintTop_toTopOf="@+id/RAD6" />
+
+            <TextView
+                android:id="@+id/Date6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="DATE"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/le6"
+                app:layout_constraintStart_toEndOf="@+id/le6"
+                app:layout_constraintTop_toTopOf="@+id/le6" />
+
+            <TextView
+                android:id="@+id/a6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="à"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/Date6"
+                app:layout_constraintStart_toEndOf="@+id/Date6"
+                app:layout_constraintTop_toTopOf="@+id/Date6" />
+
+            <TextView
+                android:id="@+id/Heure6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Heure"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/a6"
+                app:layout_constraintStart_toEndOf="@+id/a6"
+                app:layout_constraintTop_toTopOf="@+id/a6" />
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>
